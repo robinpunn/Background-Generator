@@ -8,6 +8,13 @@ const rand = document.querySelector('.rand')
 const left = document.querySelector('.left')
 const right = document.querySelector('.right')
 
+css.textContent = "linear-gradient(to right, " 
++ color1.value 
++ ", " 
++ color2.value 
++ ", " 
++ color3.value
++ ")";
 
 let randomColor = () => {
     let random = []
@@ -90,6 +97,7 @@ let pickColor = () => {
     + ")"
 
     css.textContent = body.style.background + ";";
+
 }
 
 let pickColorLeft = () => {
@@ -127,7 +135,6 @@ let pickColorLeft = () => {
     + ")"
 
     css.textContent = body.style.background + ";";
-    
     
 }
 

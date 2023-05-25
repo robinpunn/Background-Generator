@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Outfit:wght@400;700&display=swap');
+
 body {
-    font: 'Raleway', sans-serif;
+    font-family: 'Bruno Ace SC', cursive;
     color: rgba(0,0,0,0.5);
     text-align: center;
     text-transform: uppercase;
@@ -8,28 +10,41 @@ body {
     background: linear-gradient(to right, green,yellow,blue);
 }
 
+main {
+    margin: 5rem auto;
+    width: 60vw;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.border {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.container {
+    width: 50vw;
+    height: 18rem;
+    background-color: rgb(255, 255, 255);
+    /* box-shadow: 0 0 2rem 3rem rgba(255, 255, 255, .05) */
+}
+
 h1 {
-    font: 600 3.5em 'Raleway', sans-serif;
-    color: rgba(0,0,0,0.5);
+    font: 600 2.5rem;
+    color: rgb(0,0,0);
     text-align: center;
     text-transform: uppercase;
     letter-spacing: .5em;
     width: 100%;
 }
 
-h3 {
-    font: 900 1em 'Raleway', sans-serif;
-    color: rgba(0,0,0,0.5);
-    text-align: center;
-    text-transform: none;
-    letter-spacing: 0.01em;
-}
-
 button {
-    margin: 20px 10px;
-    border-radius: 100px;
-    padding: 5px;
-    width: 100px;
+    margin: 1.25rem 0.75rem;
+    padding: 0.5rem;
+    width: 8rem;
+    color: rgb(0, 0, 0);
+    font: inherit;
 }
 
 input {

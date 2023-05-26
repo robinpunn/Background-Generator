@@ -1,29 +1,29 @@
 "use strict";
-const color1 = document.querySelector('.color1');
-const color2 = document.querySelector('.color2');
-const color3 = document.querySelector('.color3');
 const body = document.getElementById('gradient');
-const button = document.querySelectorAll('button');
 const rand = document.querySelector('.rand');
 const left = document.querySelector('.left');
 const right = document.querySelector('.right');
 const copy = document.querySelector('.copy');
 const reset = document.querySelector('.reset');
+let color1 = document.querySelector('.color1');
+let color2 = document.querySelector('.color2');
+let color3 = document.querySelector('.color3');
 let side = "right";
-// if side is right, then set gradient right... otherwise set gradient left
 let setGradientRight = () => {
     body.style.background = `linear-gradient(to right, ${color1.value}, ${color2.value}, ${color3.value})`;
     rand.style.background = `linear-gradient(to right, ${color1.value}, ${color2.value}, ${color3.value})`;
     left.style.background = `linear-gradient(to left, ${color2.value}, ${color1.value})`;
     right.style.background = `linear-gradient(to right, ${color2.value}, ${color3.value}`;
     side = 'right';
+    // [color1.value, color3.value] = [color3.value, color1.value]
 };
 let setGradientLeft = () => {
     body.style.background = `linear-gradient(to left, ${color1.value}, ${color2.value}, ${color3.value})`;
     rand.style.background = `linear-gradient(to left, ${color1.value}, ${color2.value}, ${color3.value})`;
     left.style.background = `linear-gradient(to right, ${color3.value}, ${color2.value})`;
-    right.style.background = `linear-gradient(to right, ${color2.value}, ${color1.value}`;
+    right.style.background = `linear-gradient(to right, ${color2.value}, ${color1.value})`;
     side = 'left';
+    // [color1.value, color3.value] = [color3.value, color1.value]
 };
 let randomColor = () => {
     let random = [];
@@ -54,20 +54,20 @@ let resetColor = () => {
 };
 setGradientRight();
 copyColor();
-button[0].addEventListener('click', randomColor);
-button[1].addEventListener('click', setGradientLeft);
-button[2].addEventListener('click', setGradientRight);
-button[3].addEventListener('click', copyColor);
-button[4].addEventListener('click', resetColor);
+rand.addEventListener('click', randomColor);
+left.addEventListener('click', setGradientLeft);
+right.addEventListener('click', setGradientRight);
+copy.addEventListener('click', copyColor);
+reset.addEventListener('click', resetColor);
 color1.addEventListener('input', () => {
-    color1.value = color1.value;
+    // color1.value = color1.value;
     side === "left" ? setGradientLeft() : setGradientRight();
 });
 color2.addEventListener('input', () => {
-    color2.value = color2.value;
+    // color2.value = color2.value;
     side === "left" ? setGradientLeft() : setGradientRight();
 });
 color3.addEventListener('input', () => {
-    color3.value = color3.value;
+    // color3.value = color3.value;
     side === "left" ? setGradientLeft() : setGradientRight();
 });

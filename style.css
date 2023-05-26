@@ -12,10 +12,10 @@ body {
 
 main {
     margin: 5rem auto;
-    width: 60vw;
-    height: 25rem;
+    width: 90vw;
+    height: 30rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -24,9 +24,13 @@ main {
 }
 
 .container {
-    width: 50vw;
-    height: 18rem;
+    width: 80vw;
+    height: 25rem;
     background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     /* box-shadow: 0 0 2rem 3rem rgba(255, 255, 255, .05) */
 }
 
@@ -35,16 +39,16 @@ h1 {
     color: rgb(0,0,0);
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: .5em;
-    width: 100%;
+    letter-spacing: .25em;
 }
 
 button {
     margin: 1.25rem 0.75rem;
     padding: 0.5rem;
-    width: 8rem;
+    width: 3.5rem;
     color: rgb(0, 0, 0);
     font: inherit;
+    font-size: 0.5rem;
 }
 
 input {
@@ -70,3 +74,44 @@ input {
     color: aliceblue;
 }
 
+@media (min-width:40rem) {
+
+    .border {
+        background-color: rgba(0, 0, 0, 0.55);
+        margin: 5rem auto;
+        width: 60vw;
+        height: 30rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 50vw;
+        height: 18rem;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* box-shadow: 0 0 2rem 3rem rgba(255, 255, 255, .05) */
+    }
+
+    h1 {
+        font: 600 2.5rem;
+        color: rgb(0,0,0);
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: .5em;
+        width: 100%;
+    }
+
+    button {
+        margin: 1.25rem 0.75rem;
+        padding: 0.5rem;
+        width: 5rem;
+        color: rgb(0, 0, 0);
+        font: inherit;
+        font-size: 0.75rem;
+    }
+}

@@ -20,7 +20,7 @@ main {
 }
 
 .border {
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: rgba(0, 0, 0, 0.55);
 }
 
 .container {
@@ -49,6 +49,7 @@ button {
 
 input {
     margin-top: 20px;
+    border: none;
 }
 
 .rand {
@@ -61,5 +62,11 @@ input {
 
 .right {
     background: linear-gradient(to right, yellow, blue);
+}
+
+.description {
+    padding: 1.25rem;
+    background-color: rgba(0, 0, 0, 0.55);
+    color: aliceblue;
 }
 

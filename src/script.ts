@@ -8,13 +8,16 @@ const left = document.querySelector('.left') as HTMLElement
 const right = document.querySelector('.right') as HTMLElement
 const copy = document.querySelector('.copy') as HTMLElement
 const reset = document.querySelector('.reset') as HTMLElement
+let side = "right"
 
+// if side is right, then set gradient right... otherwise set gradient left
 
 let setGradientRight = () => {
     body.style.background = `linear-gradient(to right, ${color1.value}, ${color2.value}, ${color3.value})`;
     rand.style.background = `linear-gradient(to right, ${color1.value}, ${color2.value}, ${color3.value})`;
     left.style.background = `linear-gradient(to left, ${color2.value}, ${color1.value})`;
     right.style.background = `linear-gradient(to right, ${color2.value}, ${color3.value}`;
+    side = 'right'
 }
 
 let setGradientLeft = () => {
@@ -22,6 +25,7 @@ let setGradientLeft = () => {
     rand.style.background = `linear-gradient(to left, ${color1.value}, ${color2.value}, ${color3.value})`;
     left.style.background = `linear-gradient(to right, ${color3.value}, ${color2.value})`;
     right.style.background = `linear-gradient(to right, ${color2.value}, ${color1.value}`;
+    side = 'left'
 }
 
 let randomColor = () => {
@@ -71,11 +75,20 @@ button[3].addEventListener('click', copyColor)
 
 button[4].addEventListener('click', resetColor)
 
-color1.addEventListener('input', setGradientLeft)
+color1.addEventListener('input', () => {
+    color1.value = color1.value;
+    side==="left" ? setGradientLeft() : setGradientRight();
+});
 
-color2.addEventListener('input', setGradientRight)
+color2.addEventListener('input', () => {
+    color2.value = color2.value;
+    side==="left" ? setGradientLeft() : setGradientRight();
+});
 
-color3.addEventListener('input', setGradientRight)
+color3.addEventListener('input', () => {
+    color3.value = color3.value;
+    side==="left" ? setGradientLeft() : setGradientRight();
+});
 
 
 
